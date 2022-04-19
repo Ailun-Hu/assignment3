@@ -11,7 +11,6 @@ const root = createRoot(container);
 root.render(
   <div>
     <CustomizeProfile />
-
     <Data />
   </div>
 );
