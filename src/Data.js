@@ -31,8 +31,10 @@ class Data extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={() => this.setState({ items: this.state.debit})}>Debit</button>
-                <button onClick={() => this.setState({ items: this.state.credit})}>Credit</button>
+                <div class="container">
+                <button  onClick={() => this.setState({ items: this.state.debit})}>Debit</button>
+                <button  onClick={() => this.setState({ items: this.state.credit})}>Credit</button>
+                </div>
                 {this.state.items.map(data => (
                     <ul key = {data.id} className = "list">
                         <li>Description: {data.description}</li>
@@ -40,6 +42,7 @@ class Data extends React.Component {
                         <li>Date: {data.date.substring(0,10)}</li>
                     </ul>
                 ))}
+            
             </div>
         )
     }
