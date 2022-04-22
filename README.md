@@ -1,4 +1,4 @@
-#Assignment 3
+Assignment 3
 
 Alan Hu/ Ailun-Hu
 Ahmed Alsubai / ahmedaalsubai
