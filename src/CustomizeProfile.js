@@ -35,14 +35,14 @@ class Profile extends React.Component {
        if(document.getElementById("textColor").value != "") {
            document.getElementById('root').style.color = document.getElementById("textColor").value;
        }
-
        this.togglePopup();
     }
 
     render() {
         return (
-            <div>
+            <div class="container" >
             <h1>Hello {this.state.Name}</h1>
+          
             <Clock />
             <button onClick={this.togglePopup}> Customize </button>
             <form action="" id="customize" onSubmit={e => e.preventDefault()}>
@@ -62,6 +62,7 @@ class Profile extends React.Component {
                 </div>
                 <button className="submit-btn" onClick={this.customize}> Submit </button>
             </form>
+     
             </div>
         )
     }
