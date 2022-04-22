@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import './styles/Data.css'
 
@@ -31,15 +31,15 @@ class Data extends React.Component {
     render() {
         return (
             <div>
-                <div class="container">
-                <button  onClick={() => this.setState({ items: this.state.debit})}>Debit</button>
-                <button  onClick={() => this.setState({ items: this.state.credit})}>Credit</button>
+                <div className="container">
+                <button  onClick={() => this.setState({ items: this.state.debit})} className="creditDebit">Debit</button>
+                <button  onClick={() => this.setState({ items: this.state.credit})} className="creditDebit">Credit</button>
                 </div>
                 {this.state.items.map(data => (
                     <ul key = {data.id} className = "list">
-                        <li>Description: {data.description}</li>
-                        <li>Amount: {data.amount}</li>
+                        <li className="description">{data.description}</li>
                         <li>Date: {data.date.substring(0,10)}</li>
+                        <li>Amount: {data.amount}</li>
                     </ul>
                 ))}
             

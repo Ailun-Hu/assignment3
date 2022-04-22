@@ -44,7 +44,7 @@ class Profile extends React.Component {
             <h1>Hello {this.state.Name}</h1>
           
             <Clock />
-            <button onClick={this.togglePopup}> Customize </button>
+            <button onClick={this.togglePopup} id="customizebtn"> Customize </button>
             <form action="" id="customize" onSubmit={e => e.preventDefault()}>
                 <a href="#" className="close" onClick={this.togglePopup}>&times;</a>
                 <h2>CustomizeProfile</h2>
